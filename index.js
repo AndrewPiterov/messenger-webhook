@@ -62,3 +62,8 @@ app.get('/webhook', (req, res) => {
     }
   }
 });
+
+app.get('/ping', (_, res) => {
+  console.log('pong');
+  res.status(200).send({ok: true});
+});
